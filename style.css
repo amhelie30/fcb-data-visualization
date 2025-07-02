@@ -1,0 +1,29 @@
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.fa-globe,
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-tiktok,
+.fa-youtube {
+  font-size: 25px;
+  color: white;
+  margin: 0 10px 0 10px;
+}
+.fa-globe:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-tiktok:hover,
+.fa-youtube:hover {
+  color: gray;
+}
