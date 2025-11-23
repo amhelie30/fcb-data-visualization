@@ -27,3 +27,86 @@ footer {
 .fa-youtube:hover {
   color: gray;
 }
+
+/* Ensure charts have enough height for horizontal bars */
+canvas {
+  width: 100% !important;
+  height: 480px; /* fixed height so Chart.js can render with maintainAspectRatio:false */
+}
+
+/* Twitter card and trending list styles */
+.twitter-card {
+  border-radius: 8px;
+}
+.chart-col {
+  min-height: 360px;
+}
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.85);
+  z-index: 10;
+}
+.trending-list .trend-item { 
+  border-bottom: 1px solid #eef2f7; 
+}
+.trend-name {
+  display: block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trend-item .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+/* Table styles used for both platforms */
+.trending-table thead th {
+  background: #f8f9fb;
+  border-bottom: 2px solid #e9eef6;
+}
+.trending-table tbody td {
+  vertical-align: middle;
+}
+.trending-table .trend-name {
+  max-width: 180px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Layout: ensure full-height page so footer can stick to bottom */
+html, body {
+  height: 100%;
+}
+
+/* Add bottom padding to avoid footer overlap with content */
+.bg-dark {
+  padding-bottom: 100px; /* space for the fixed footer */
+  min-height: 100vh;
+}
+
+/* Make the footer stick to the bottom of the viewport */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+/* Allow tables to scroll independently when there are many topics */
+.table-responsive {
+  max-height: 320px;
+  overflow-y: auto;
+}
